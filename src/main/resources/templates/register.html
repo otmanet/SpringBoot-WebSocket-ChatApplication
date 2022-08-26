@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+  <link rel="stylesheet" href="css/formlogin.css">
+</head>
+<body>
+<div id="form-page">
+  <div class="form-page-container">
+    <h1 class="title">Sign up Form</h1>
+    <form th:action="@{/registerSave}" method="post"  id="usernameForm" name="usernameForm"  >
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" id="Username" aria-describedby="emailHelp" placeholder="email" >
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="username"  aria-describedby="emailHelp" placeholder="username" >
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="password" id="password" placeholder="password" >
+      </div>
+      <div class="text-center">
+        <a th:href="@{/registerform}">sign up</a>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="accent username-submit">Sign up</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
